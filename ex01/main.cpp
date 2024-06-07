@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/07 12:39:56 by siun              #+#    #+#             */
-/*   Updated: 2024/06/07 13:01:50 by siun             ###   ########.fr       */
+/*   Created: 2024/06/07 13:04:04 by siun              #+#    #+#             */
+/*   Updated: 2024/06/07 13:07:06 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# define WHATEVER_HPP
-# include <iostream>
-# include <string>
+#include "iter.hpp"
 
-template <typename T>
-void swap(T &a, T &b) {
-	T tmp = a;
-	a = b;
-	b = tmp;
+int main() {
+
+	int array[] = {1, 2, 3, 4, 5};
+	iter(array, 5, print);
+
+	std::cout << "----------------------------------------" << std::endl;
+
+	std::string array2[] = {"Hello", "World", "It's", "CPP", "07"};
+	iter(array2, 5, print);
+
+	return 0;
 }
-
-template <typename T>
-T min(T a, T b) {
-	return a < b ? a : b;
-}
-
-template <typename T>
-T max(T a, T b) {
-	return a > b ? a : b;
-}
-
-#endif
